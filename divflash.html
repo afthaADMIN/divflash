@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body id="ScriptContents">
+    <script>
+    let screen = document.getElementById('ScriptContents');
+    let child = document.createElement("div");
+    child.innerHTML = 'Your message here'
+    child.backgroundColor = 'white';
+    screen.appendChild(child);
+    let count = 0;
+    let animation = setInterval(flash, 100);
+    function flash(div) {
+        count++;
+        if( count % 2 === 1) {
+            screen.style.backgroundColor = 'yellow';
+        }if (count >=300) {
+            clearInterval(animation);
+        } 
+        if(count % 2 === 0) {
+            screen.style.backgroundColor = 'white';
+        }
+    }
+     
+    </script>
+</body>
+</html>
